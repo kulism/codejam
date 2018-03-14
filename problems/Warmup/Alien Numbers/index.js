@@ -9,7 +9,7 @@
 // FF -> 15*16^1 + 15*16^0
 // https://code.google.com/codejam/contest/32003/dashboard
 
-var codeJam = require('../../code-jam');
+var run = require('../../../utils/run');
 
 function convertToDecimal(sourceLanguage, sourceNumber) {
     // todo: check uniqueness of source languageBase
@@ -56,7 +56,7 @@ function convertToSystem(alienNumber, sourceLanguage, targetLanguage) {
     return asInTargetSystem;
 }
 
-codeJam.run((inputLines) => {
+run((inputLines) => {
     const numLines = inputLines.shift();
 
     return inputLines.map((inputLine) => {

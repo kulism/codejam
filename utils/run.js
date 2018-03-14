@@ -1,7 +1,7 @@
 const os = require("os");
 const readline = require('readline');
 
-exports.run = (task) => {
+module.exports = (handler) => {
     const rl = readline.createInterface({
         input: process.stdin,
     });
@@ -12,7 +12,7 @@ exports.run = (task) => {
     });
 
     rl.on('close', () => {
-        task(inputLines).map((outputLine) => {
+        handler(inputLines).map((outputLine) => {
             process.stdout.write(outputLine);
             process.stdout.write(os.EOL);
         });
